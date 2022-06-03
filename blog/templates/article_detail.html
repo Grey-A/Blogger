@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} {{ post.title }} {% endblock %}
+
+{% block body %}
+    <div class="container" style="font-size: 20px;">
+
+        <div class="container" style="height: 200px; width: max-content;"></div>
+        <article>
+            <h1>{{ post.title }}</h1><br/>
+        </article>
+
+        <small>{{ post.date_added }}</small>
+        <small>By: {{ post.author.first_name }} {{ post.author.last_name }}</small>
+
+        <hr/>
+
+        {% if post.intro_image %}
+            <img src="{{ post.header_image.url }}"/>
+        {% endif %}
+        
+        <br/><br/>
+      
+        {{ post.body|safe }}
+
+        <br/><br/>
+        <hr/>
+    </div>
+{% endblock %}

@@ -1,0 +1,11 @@
+Here are all the possible improvements that can be made to the blog
+
+-----------------------------
+
+1. Post title should appear in the url instead of the primary key
+
+2. automate that available categories should appear in the navbar instead of hard coding it
+
+3. Popular posts should appear automatically at their section instead of hardcoding it
+
+4. Category feauture is inefficient, look into it and improve it 

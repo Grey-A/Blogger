@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+# Extend Title
+{% block title %} Subscribe {% endblock %}
+
+# Main Body
+{% block body %}
+    <h1 class="text-center">Subscribe to our Newsletter </h1>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <form method="POST" action="{% url 'subscribe' %}" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button class="btn btn-secondary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/><br/>
+{% endblock %}
